@@ -31,7 +31,6 @@
 			<version>${junit.version}</version>
 		</dependency>
 		
-		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -80,7 +79,6 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- log -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -101,14 +99,12 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-		<!-- 数据源配置 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>${druid-version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- driver -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -116,7 +112,6 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -130,22 +125,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>releases</name>
-			<url>http://192.168.10.38:8081/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>snapshots</name>
-			<url>http://192.168.10.38:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<build>
-		
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<resources>
@@ -156,6 +136,7 @@
 				</includes>
 				<excludes>
 					<exclude>**/.svn/</exclude>
+					<exclude>**/.git/</exclude>
 				</excludes>
 			</resource>
 		</resources>
@@ -167,6 +148,7 @@
 				</includes>
 				<excludes>
 					<exclude>**/.svn/</exclude>
+					<exclude>**/.git/</exclude>
 				</excludes>
 			</testResource>
 		</testResources>
@@ -182,30 +164,6 @@
 					<encoding>UTF8</encoding>
 				</configuration>
 			</plugin>
-			<!-- 添加sources目录
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.1</version>
-				<executions>
-					<execution>
-						<id>add-source</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>src/main/resource</source>
-								<source>src/main/java</source>
-								<source>src/test/java</source>
-								<source>src/test/resource</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
-			
 			
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
@@ -223,7 +181,6 @@
 				</executions>
 			</plugin>
 			
-			<!-- 打jar排除test文件-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-jar-plugin</artifactId>
