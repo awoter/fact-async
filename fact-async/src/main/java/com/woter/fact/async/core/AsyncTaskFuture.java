@@ -2,15 +2,9 @@ package com.woter.fact.async.core;
 
 import java.util.Map;
 
-
-/**
- * @author	hz15041240 
- * @date	2016-8-23 下午8:06:02
- * @version      
- */
 /**
  *  
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-8-23 下午8:06:02
  * @version     
  */

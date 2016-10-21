@@ -19,11 +19,10 @@ import com.woter.fact.async.util.ReflectionHelper;
 /**
  * <p>
  * 
- * 使用cglib lazyLoader，避免每次调用future
  * 
  * </p>
  * 
- * @author hz15041240
+ * @author woter
  * @date 2016-3-23 下午7:46:03
  * @version
  */
@@ -46,7 +45,7 @@ public class AsyncResultInterceptor implements MethodInterceptor {
     private Object loadFuture() throws Throwable {
 	long startRunTime = System.currentTimeMillis();
 	try {
-	    if (timeout <= 0) {// <=0处理，不进行超时控制
+	    if (timeout <= 0) {
 		return future.get();
 	    } else {
 		return future.get(timeout, TimeUnit.MILLISECONDS);

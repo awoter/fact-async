@@ -11,7 +11,7 @@ import com.woter.fact.async.constant.AsyncConstant;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-23 下午2:55:23
  * @version      
  */

@@ -21,7 +21,7 @@ import com.woter.fact.async.annotation.Async;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-4-11 下午2:37:14
  * @version      
  */
@@ -53,17 +53,17 @@ public class ReflectionHelper {
         Constructor constructor = null;
         Object[] constructorArgs = new Object[0];
         try {
-            constructor = type.getConstructor(new Class[] {});// 先尝试默认的空构造函数
+            constructor = type.getConstructor(new Class[] {});
         } catch (NoSuchMethodException e) {
             // ignore
         }
 
-        if (constructor == null) {// 没有默认的构造函数，尝试别的带参数的函数
+        if (constructor == null) {
             Constructor[] constructors = type.getConstructors();
             if (constructors == null || constructors.length == 0) {
                 throw new UnsupportedOperationException("Class[" + type.getName() + "] has no public constructors");
             }
-            constructor = constructors[getSimpleParamenterTypeIndex(constructors)];// 默认取第一个参数
+            constructor = constructors[getSimpleParamenterTypeIndex(constructors)];
             Class[] params = constructor.getParameterTypes();
             constructorArgs = new Object[params.length];
             for (int i = 0; i < params.length; i++) {
@@ -100,9 +100,9 @@ public class ReflectionHelper {
     }
     
     public static Object getDefaultValue(Class cl) {
-        if (cl.isArray()) {// 处理数组
+        if (cl.isArray()) {
             return Array.newInstance(cl.getComponentType(), 0);
-        } else if (cl.isPrimitive() || primitiveValueMap.containsKey(cl)) { // 处理原型
+        } else if (cl.isPrimitive() || primitiveValueMap.containsKey(cl)) { 
             return primitiveValueMap.get(cl);
         } else {
             return null;
@@ -123,9 +123,9 @@ public class ReflectionHelper {
     
     public static Class<?> getGenericClass(ParameterizedType parameterizedType, int i) {
         Object genericClass = parameterizedType.getActualTypeArguments()[i];
-        if (genericClass instanceof ParameterizedType) { // 处理多级泛型
+        if (genericClass instanceof ParameterizedType) {
             return (Class<?>) ((ParameterizedType) genericClass).getRawType();
-        } else if (genericClass instanceof GenericArrayType) { // 处理数组泛型
+        } else if (genericClass instanceof GenericArrayType) {
             return (Class<?>) ((GenericArrayType) genericClass).getGenericComponentType();
         } else {
             return (Class<?>) genericClass;

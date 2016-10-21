@@ -19,7 +19,7 @@ import com.woter.fact.async.core.AsyncProfiler;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-23 下午1:57:34
  * @version      
  */
@@ -47,7 +47,7 @@ public class AsyncThreadTaskPool {
     
     public <T> AsyncFutureTask<T> submit(AsyncPoolCallable<T> task,AsyncFutureCallback<T> callback) {
         if (task == null) throw new NullPointerException();
-        AsyncFutureTask<T> ftask = new AsyncFutureTask<T>(task,callback); // 使用自定义的Future
+        AsyncFutureTask<T> ftask = new AsyncFutureTask<T>(task,callback);
         if(AsyncProfiler.get().getNumber() >= threadPoolExecutor.getCorePoolSize()){
             T t = null;
             SyncResult<T> sync = new SyncResult<T>();

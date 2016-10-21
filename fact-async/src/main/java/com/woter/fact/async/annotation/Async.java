@@ -16,7 +16,7 @@ import com.woter.fact.async.constant.AsyncConstant;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-23 上午10:41:51
  * @version      
  */
@@ -33,7 +33,7 @@ public @interface Async {
      * </p>
      * @return
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-3-23 上午10:53:11
      * @version
      */

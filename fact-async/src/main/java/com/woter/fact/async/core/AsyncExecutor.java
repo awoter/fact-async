@@ -25,7 +25,7 @@ import com.woter.fact.async.pool.NamedThreadFactory;
  * 
  * </p>
  * 
- * @author hz15041240
+ * @author woter
  * @date 2016-3-23 上午11:22:17
  * @version
  */
@@ -86,18 +86,6 @@ public class AsyncExecutor {
 	}
 	return pool.submit(task, callback);
     }
-
-    /*public static void submit(AsyncRunnable runnable) {
-	if (!isInit.get()) {
-	    logger.warn("project started not initialize pluto-async");
-	    initPool(null, null, null, null, null, null);
-	}
-	if(isDestroyed()){
-	    runnable.run();
-	}else{
-	    pool.execute(runnable);
-	}
-    }*/
 
     public static void destroy() {
 	if (isInit.get() && (pool != null)) {

@@ -15,7 +15,7 @@ import com.woter.fact.async.core.AsyncTask;
  *
  *
  * </p>
- * @author	hz15041240
+ * @author	woter
  * @date	2016-7-28 下午2:08:30
  * @version      
  */

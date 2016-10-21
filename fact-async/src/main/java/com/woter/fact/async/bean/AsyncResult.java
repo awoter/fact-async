@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 
  * </p>
  * 
- * @author hz15041240
+ * @author woter
  * @date 2016-4-12 下午4:19:14
  * @version
  */
@@ -23,7 +23,7 @@ public class AsyncResult<T> implements Serializable{
      *
      * </p>
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-15 下午4:31:34
      * @version     
      */ 

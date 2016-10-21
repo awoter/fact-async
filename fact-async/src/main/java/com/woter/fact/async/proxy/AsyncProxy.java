@@ -7,7 +7,7 @@ package com.woter.fact.async.proxy;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-23 上午10:58:31
  * @version      
  */

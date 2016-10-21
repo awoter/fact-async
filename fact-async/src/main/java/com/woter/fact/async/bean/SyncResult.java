@@ -2,7 +2,7 @@ package com.woter.fact.async.bean;
 
 /**
  *  
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-8-24 下午6:05:21
  * @version     
  */

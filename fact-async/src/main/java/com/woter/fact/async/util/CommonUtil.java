@@ -12,7 +12,7 @@ import org.springframework.util.ClassUtils;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-4-5 下午5:31:28
  * @version      
  */
@@ -49,20 +49,6 @@ public class CommonUtil {
 	return strbuilder.toString();
     }
     
-    /**
-     * 
-     * <p>
-     * 
-     * 校验是否只包含 数字0-9
-     * 是 返回true  否则返回false
-     * </p>
-     * @param number
-     * @return
-     *  
-     * @author	hz15041240 
-     * @date	2016-4-8 下午3:37:27
-     * @version
-     */
     public static boolean isNumber(String number) {
 	String regex = "^[0-9]+$";
 	return Pattern.matches(regex, number);

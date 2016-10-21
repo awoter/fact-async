@@ -17,16 +17,16 @@ import com.woter.fact.async.core.AsyncProfiler;
  * 
  * </p>
  * 
- * @author hz15041240
+ * @author woter
  * @date 2016-3-23 下午2:16:04
  * @version
  */
 public class AsyncFutureTask<V> extends FutureTask<V> {
     
 
-    private long startTime = 0; // 记录future开始执行的时间
+    private long startTime = 0;
 
-    private long endTime = 0; // 记录future执行结束时间
+    private long endTime = 0;
     
     private Profiler profiler ;
 
@@ -49,7 +49,7 @@ public class AsyncFutureTask<V> extends FutureTask<V> {
 
     @Override
     protected void done() {
-	endTime = System.currentTimeMillis(); // 记录一下时间点，Future在cancel调用，正常完成，或者运行出异常都会回调该方法
+	endTime = System.currentTimeMillis();
 	if(profiler.getNumber() == 1){
 	    AsyncProfiler.release();
 	}else{

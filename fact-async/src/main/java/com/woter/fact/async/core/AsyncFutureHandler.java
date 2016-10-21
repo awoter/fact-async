@@ -8,7 +8,7 @@ package com.woter.fact.async.core;
  *
  * </p>
  *  
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-4-21 上午11:28:28
  * @version
  */
@@ -26,7 +26,7 @@ public interface AsyncFutureHandler<V> {
      * 		false:V v则有结果
      * @param v
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-21 上午11:27:17
      * @version
      */

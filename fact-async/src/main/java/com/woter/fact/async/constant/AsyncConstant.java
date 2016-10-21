@@ -6,7 +6,7 @@ package com.woter.fact.async.constant;
  * 
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-23 下午2:32:44
  * @version      
  */

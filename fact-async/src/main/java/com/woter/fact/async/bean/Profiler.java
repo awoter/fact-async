@@ -2,12 +2,9 @@ package com.woter.fact.async.bean;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-
-
-
 /**
  *  
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-8-18 下午5:53:06
  * @version     
  */

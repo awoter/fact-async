@@ -6,7 +6,7 @@ package com.woter.fact.async.core;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-28 下午3:39:32
  * @version      
  */

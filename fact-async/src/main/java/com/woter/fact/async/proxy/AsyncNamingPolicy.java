@@ -3,13 +3,8 @@ package com.woter.fact.async.proxy;
 import org.springframework.cglib.core.DefaultNamingPolicy;
 
 /**
- * @author	hz15041240 
- * @date	2016-9-2 上午11:06:06
- * @version      
- */
-/**
  *  
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-9-2 上午11:06:06
  * @version     
  */

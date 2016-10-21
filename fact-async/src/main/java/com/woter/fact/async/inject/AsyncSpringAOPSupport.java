@@ -19,7 +19,7 @@ import com.woter.fact.async.util.ReflectionHelper;
  *
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-4-1 下午5:00:28
  * @version      
  */

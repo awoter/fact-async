@@ -26,7 +26,7 @@ import com.woter.fact.async.util.ReflectionHelper;
  * 编程式异步调用模板
  *
  * </p>
- * @author	hz15041240 
+ * @author	woter 
  * @date	2016-3-31 下午4:27:27
  * @version      
  */
@@ -44,14 +44,13 @@ public class AsyncTemplate {
      * <p>
      * 
      * 获取代理方式：</br>
-     * ProxyType.SPRING 返回Spring Aop代理</br>
      * ProxyType.CGLIB 返回Cglib代理
      * 
      * </p>
      * @param type
      * @return
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:42:37
      * @version
      */
@@ -68,9 +67,9 @@ public class AsyncTemplate {
      * </p>
      * @param t  需要被代理的类
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-1 下午12:23:45
      * @version
      */
@@ -88,9 +87,9 @@ public class AsyncTemplate {
      * @param t 需要被代理的类
      * @param timeout 超时时间（单位：毫秒）
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:04:58
      * @version
      */
@@ -111,9 +110,9 @@ public class AsyncTemplate {
      * @param T 需要被代理的类
      * @param proxyType 代理类型
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:06:19
      * @version
      */
@@ -132,9 +131,9 @@ public class AsyncTemplate {
      * @param timeout 超时时间（单位：毫秒）
      * @param proxyType 代理类型
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:47:05
      * @version
      */
@@ -151,9 +150,9 @@ public class AsyncTemplate {
      * </p>
      * @param AsyncCallback<T> 需要实现的接口
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:08:21
      * @version
      */
@@ -171,16 +170,15 @@ public class AsyncTemplate {
      * @param AsyncCallback<T> 需要实现的接口
      * @param timeout 执行超时时间(单位：毫秒)
      * @return T 必须带有返回参数且不支持void,array及Integer,Long,String,Boolean等Final修饰类</br>
-     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     *  如果需要返回以上类型，可以创建对象包装；如：{@linkplain com.woter.fact.async.bean.AsyncResult}
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-4-14 上午10:35:48
      * @version
      */
     public static <T> T execute(AsyncFuture<T> asyncFuture,long timeout){
 	Type type = asyncFuture.getClass().getGenericInterfaces()[0];
         if (!(type instanceof ParameterizedType)) {
-            //未指定AsyncCallback的泛型信息
             throw new AsyncException("you should specify AsyncCallback<T> for T type");
         }
         Class returnClass = (Class) ReflectionHelper.getGenericClass((ParameterizedType) type, 0);
@@ -196,7 +194,7 @@ public class AsyncTemplate {
      * </p>
      * @param runable 实现AsyncRunnable接口
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-7-28 下午2:34:03
      * @version
      */
@@ -214,7 +212,7 @@ public class AsyncTemplate {
      * @param asyncFutrue
      * @param asyncFutureCallback
      *  
-     * @author	hz15041240 
+     * @author	woter 
      * @date	2016-8-1 下午5:20:22
      * @version
      */
