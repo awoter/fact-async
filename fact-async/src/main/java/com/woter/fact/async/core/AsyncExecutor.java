@@ -53,7 +53,7 @@ public class AsyncExecutor {
 		maxPoolSize = corePoolSize;
 	    }
 	    if (maxAcceptCount == null || maxAcceptCount < 0) {
-		maxAcceptCount = (corePoolSize / 2);
+		maxAcceptCount = (corePoolSize * 2);
 	    }
 	    HandleMode handleMode = HandleMode.CALLERRUN;
 	    if (!StringUtils.isEmpty(rejectedExecutionHandler)) {
