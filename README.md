@@ -67,7 +67,7 @@ fact-async 是一个基于Spring的异步并行框架；主要包括一下几个
 ```
 ## **常用功能代码演示**
 
-### **示例1, 添加@Async注解**
+### **示例1 添加@Async注解**
 ```java
 @Async(timeout=1000)
 public List<InsureSimple> queryByCombinationGroup(ClaimsSearchRequest param, int pageNum, int pageSize) {
@@ -75,7 +75,7 @@ public List<InsureSimple> queryByCombinationGroup(ClaimsSearchRequest param, int
 }
 ```
 
-### **示例2, 编程式异步**
+### **示例2 编程式异步**
 ```java
  public void insertSysLogBySrpingProxy(){
 	TSystemLog systemLog = new TSystemLog();
@@ -94,7 +94,7 @@ public List<InsureSimple> queryByCombinationGroup(ClaimsSearchRequest param, int
  }
 ```
 
-### **示例3，异步事件编程**
+### **示例3 异步事件编程**
 ```java
 public void  addUser(User user){
         Map<String,User> map = new HashMap<String,User>();
