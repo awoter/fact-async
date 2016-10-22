@@ -32,6 +32,19 @@ fact-async 是一个基于Spring的异步并行框架；主要包括一下几个
 
 4、解决多层异步嵌套带来的线程阻塞问题（目前spring-async依然存在此问题）；
 
+
+## **举个栗子**
+
+1、最典型的就是分页：
+
+	通常我们都是串行执行两条SQL语句，一条查询列表数据一条查询count；比如查询列表数据耗时300ms查询count500ms，
+	正常情况耗时则800ms;如果使用异步则只要500ms；
+
+2、非事务性异步处理：
+
+	某些情况下我在做完事务操作后需要操作一些耗时的非事务性处理，那这个时候则可以使用异步去完成提升了接口速度；
+
+
 ## **集成Spring配置说明**
 1、Spring配置文件添加（必填）：
 
@@ -54,7 +67,7 @@ fact-async 是一个基于Spring的异步并行框架；主要包括一下几个
 ```
 ## **常用功能代码演示**
 
-### **示例1, 添加@async注解**
+### **示例1, 添加@Async注解**
 ```java
 @Async(timeout=1000)
 public List<InsureSimple> queryByCombinationGroup(ClaimsSearchRequest param, int pageNum, int pageSize) {
