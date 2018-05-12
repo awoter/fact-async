@@ -63,7 +63,7 @@ public class AsyncTemplate {
      * @return T
      * 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2016-4-1 下午12:23:45
      * @version
@@ -84,7 +84,7 @@ public class AsyncTemplate {
      * @return T
      * 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2016-4-14 上午10:04:58
      * @version
@@ -105,7 +105,7 @@ public class AsyncTemplate {
      * @return T
      * 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2016-4-14 上午10:06:19
      * @version
@@ -127,7 +127,7 @@ public class AsyncTemplate {
      * @return T
      * 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2016-4-14 上午10:47:05
      * @version
@@ -164,7 +164,7 @@ public class AsyncTemplate {
      * @return T
      * 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2016-4-14 上午10:08:21
      * @version
@@ -205,7 +205,7 @@ public class AsyncTemplate {
      * @return List<E>
      * E 必须带有返回参数且不支持Void,Array及Integer,Long,String,Boolean等Final修饰类</br>
      * 如果需要返回以上类型，可以创建对象包装；如：
-     * {@linkplain com.hzins.pluto.async.bean.AsyncResult}
+     * {@linkplain com.woter.fact.async.bean.AsyncResult}
      * @author woter
      * @date 2017-7-17 下午5:50:55
      * @version
